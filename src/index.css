@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-900 text-stone-50;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .clip-angle {
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  }
+}
